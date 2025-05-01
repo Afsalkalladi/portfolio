@@ -1,0 +1,6 @@
+[build]
+  command   = "npm run build"
+  publish   = ".next"          # Netlify’s Next plugin will inject the right artifacts here
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
