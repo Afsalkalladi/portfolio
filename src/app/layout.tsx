@@ -1,11 +1,9 @@
-// src/app/layout.tsx
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Afsal Kalladi Portfolio",
-  description:
-    "Interactive web experiences with Next.js, Tailwind v4 & Framer Motion",
+  description: "B.Tech EEE @ CUSAT · VLSI & FPGA Enthusiast",
 };
 
 export default function RootLayout({
@@ -15,11 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-background-500 text-white">
-        {/* Navbar is here once for all pages */}
+      <body className="bg-background-500 text-white transition-colors duration-300">
         <Navbar />
-
-        {/* Page content (Hero, Carousel, Sections…) */}
         {children}
       </body>
     </html>
