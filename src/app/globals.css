@@ -1,10 +1,22 @@
 @import "tailwindcss";
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html, body {
+  font-family: 'Raleway', sans-serif;
+}
+
 
 @theme {
   --color-primary-500:    #a065ff;
   --color-accent-500:     #33ddc1;
   --color-background-500: #07070a;
   --radius-xl:            2rem;
+}
+
+.hero-font {
+  font-family: 'Pacifico', cursive;
 }
 
 html { scroll-behavior: smooth; }

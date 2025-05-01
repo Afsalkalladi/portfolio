@@ -14,9 +14,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl font-bold text-white"
+            className="text-4xl sm:text-5xl font-railway font-bold text-white"
           >
-            Hi, I’m Afsal K
+            Hi, I’m Afsal
           </motion.h1>
 
           <motion.p
@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden">
             <img
               src="/images/profile.jpg"
-              alt="Afsal K"
+              alt="Afsalkalldi"
               className="w-full h-full object-cover"
             />
           </div>
