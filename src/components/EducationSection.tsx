@@ -22,15 +22,13 @@ export default function EducationSection() {
             {/* Degree first */}
             <h3 className="text-xl font-bold text-white mb-1">{edu.degree}</h3>
             {/* Institution second */}
-            <p className="text-accent-500 font-medium mb-2">
-              {edu.institution}
-            </p>
+            <p className="text-white/80 font-medium mb-2">{edu.institution}</p>
             {/* Period */}
             <p className="text-white/70 mb-3">{edu.period}</p>
-            {/* Details if present */}
+            {/* Details if present
             {edu.details && (
               <p className="text-white/80 text-sm">{edu.details}</p>
-            )}
+            )} */}
           </motion.div>
         ))}
       </div>

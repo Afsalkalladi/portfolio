@@ -54,7 +54,7 @@ export default function Hero() {
         <div className="mt-12 lg:mt-0 lg:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden">
             <img
-              src="/images/profile.jpg"
+              src="/images/profile.png"
               alt="Afsalkalldi"
               className="w-full h-full object-cover"
             />

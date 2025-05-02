@@ -54,7 +54,7 @@ export default function Navbar() {
         ))}
 
         {/* Social icons (desktop only) */}
-        <div className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300">
+        {/* <div className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300">
           <Link
             href="https://github.com/afsalkalladi"
             target="_blank"
@@ -75,7 +75,7 @@ export default function Navbar() {
           >
             <FiMail size={20} />
           </Link>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

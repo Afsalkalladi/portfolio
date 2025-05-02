@@ -18,9 +18,9 @@ export default function Footer() {
                         rounded-full px-6 py-3 flex items-center gap-4
                         border border-gray-400 dark:border-gray-600"
         >
-          <span className="text-gray-100 dark:text-gray-300 font-medium">
+          {/* <span className="text-gray-100 dark:text-gray-300 font-medium">
             Follow me
-          </span>
+          </span> */}
           <div className="flex gap-4 text-gray-100 dark:text-gray-300">
             <a
               href="https://github.com/afsalkalladi"
@@ -47,7 +47,7 @@ export default function Footer() {
 
         {/* Copyright centered below */}
         <p className="text-sm text-white/50">
-          &copy; {new Date().getFullYear()} Afsal K
+          &copy; {new Date().getFullYear()}
         </p>
       </div>
     </footer>
