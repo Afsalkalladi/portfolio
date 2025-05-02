@@ -7,24 +7,22 @@ export default function Footer() {
   return (
     <footer
       className="py-8 px-4
-                       bg-white/10 dark:bg-black/10 backdrop-blur-lg
-                       border-t border-white/20 dark:border-black/20"
+                 bg-transparent
+                 border-t border-white/20 dark:border-black/20"
     >
       <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-4">
-        {/* Follow-me pill in central alignment */}
+        {/* Social media pill */}
         <div
           className="w-fit
-                        bg-gray-200/20 dark:bg-gray-800/20 backdrop-blur-md
-                        rounded-full px-6 py-3 flex items-center gap-4
-                        border border-gray-400 dark:border-gray-600"
+                     bg-gray-200/20 dark:bg-gray-800/20 backdrop-blur-md
+                     rounded-full px-6 py-3 flex items-center gap-4
+                     border border-gray-400 dark:border-gray-600"
         >
-          {/* <span className="text-gray-100 dark:text-gray-300 font-medium">
-            Follow me
-          </span> */}
           <div className="flex gap-4 text-gray-100 dark:text-gray-300">
             <a
               href="https://github.com/afsalkalladi"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-gray-400"
             >
               <FiGithub size={20} />
@@ -32,6 +30,7 @@ export default function Footer() {
             <a
               href="https://linkedin.com/in/afsalkalladi"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-gray-400"
             >
               <FiLinkedin size={20} />
@@ -45,7 +44,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright centered below */}
+        {/* Copyright text */}
         <p className="text-sm text-white/50">
           &copy; {new Date().getFullYear()}
         </p>
