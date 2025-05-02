@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+// import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const SECTIONS = ["home", "education", "projects"] as const;
 type Section = (typeof SECTIONS)[number];
