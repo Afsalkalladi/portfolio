@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { certificationsData } from "@/data/certifications";
 
 export default function CertificationsSection() {
-  const [selectedCert, setSelectedCert] = useState(null);
+  const [selectedCert, setSelectedCert] = useState<Cert | null>(null);
 
   return (
     <section id="certifications" className="py-10 px-6 bg-background-500/10">

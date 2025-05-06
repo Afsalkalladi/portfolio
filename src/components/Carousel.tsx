@@ -6,7 +6,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import { projectsData, ProjectEntry } from "@/data/projects";
+import { projectsData } from "@/data/projects";
 
 // Badge color function reused from ProjectsSection
 const getBadgeColor = (type: string) => {
@@ -22,10 +22,7 @@ const getBadgeColor = (type: string) => {
 };
 
 export default function Carousel() {
-  const [selectedProject, setSelectedProject] = useState<ProjectEntry | null>(
-    null
-  );
-
+  const [selectedProject, setSelectedProject] = useState(null);
   return (
     <section id="carousel" className="py-20 bg-background-500/5">
       <div className="max-w-6xl mx-auto px-6">
