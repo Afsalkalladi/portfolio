@@ -1,9 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { projectsData } from "@/data/projects";
 
+// Function to return badge color classes based on project type
+const getBadgeColor = (type: string) => {
+  const normalized = type.toLowerCase();
+  if (normalized.includes("academic")) return "bg-blue-500/20 text-blue-300";
+  if (normalized.includes("personal"))
+    return "bg-purple-500/20 text-purple-300";
+  if (normalized.includes("mini")) return "bg-yellow-500/20 text-yellow-300";
+  if (normalized.includes("major")) return "bg-red-500/20 text-red-300";
+  if (normalized.includes("freelance"))
+    return "bg-emerald-500/20 text-emerald-300";
+  return "bg-gray-500/20 text-gray-300"; // default
+};
+
 export default function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <section id="projects" className="py-10 px-6 bg-background-500/10">
       <h2 className="text-3xl font-semibold text-primary-500 text-center mb-12">
@@ -18,33 +34,62 @@ export default function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/5 border border-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            className="bg-white/5 border border-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-shadow duration-300 ease-in-out cursor-pointer"
+            onClick={() => setSelectedProject(proj)}
           >
+            {proj.period && (
+              <span
+                className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${getBadgeColor(
+                  proj.period
+                )}`}
+              >
+                {proj.period}
+              </span>
+            )}
             <h3 className="text-xl font-semibold text-white mb-2">
               {proj.title}
             </h3>
+            <p className="text-white/70 text-sm line-clamp-2">{proj.details}</p>
+          </motion.div>
+        ))}
+      </div>
 
-            {proj.period && (
-              <p className="text-white/60 text-sm mb-3">{proj.period}</p>
+      {/* Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+          <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl max-w-md w-full relative text-white shadow-xl">
+            <button
+              className="absolute top-3 right-4 text-white/70 text-xl"
+              onClick={() => setSelectedProject(null)}
+            >
+              &times;
+            </button>
+            <h3 className="text-2xl font-bold mb-1">{selectedProject.title}</h3>
+            {selectedProject.period && (
+              <span
+                className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${getBadgeColor(
+                  selectedProject.period
+                )}`}
+              >
+                {selectedProject.period}
+              </span>
             )}
-
-            <p className="text-white/80 text-sm flex-grow leading-relaxed">
-              {proj.details}
+            <p className="text-white/80 text-sm mb-4">
+              {selectedProject.details}
             </p>
-
-            {proj.link && (
+            {selectedProject.link && (
               <a
-                href={proj.link}
+                href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 text-accent-500 font-medium hover:underline"
+                className="text-blue-400 hover:underline text-sm"
               >
                 View Code
               </a>
             )}
-          </motion.div>
-        ))}
-      </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -22,14 +22,14 @@ export interface EducationEntry {
       institution: "Kalladi HSS, Kumarumputhur",
       degree: "Higher Secondary",
       period: "2020 - 2022",
-      details: " 91%.",
+      // details: " 91%.",
     },
     {
       id: "e3",
       institution: "GHS Karakurissi",
       degree: "SSLC ",
       period: "2019 - 2020",
-      details: " 96%.",
+      // details: " 96%.",
     },
   ];
   
