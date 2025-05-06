@@ -22,7 +22,9 @@ const getBadgeColor = (type: string) => {
 };
 
 export default function Carousel() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectEntry | null>(
+    null
+  );
 
   return (
     <section id="carousel" className="py-20 bg-background-500/5">

@@ -1,11 +1,9 @@
-// src/components/Navbar.tsx
 "use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
-const SECTIONS = ["home", "education", "projects"] as const;
+const SECTIONS = ["home", "education", "certifications", "projects"] as const;
 type Section = (typeof SECTIONS)[number];
 
 export default function Navbar() {
@@ -14,10 +12,12 @@ export default function Navbar() {
   // Scroll-spy to highlight the active section
   useEffect(() => {
     const onScroll = () => {
-      const pos = window.scrollY + 120;
+      const pos = window.scrollY + 120; // 120px offset for better precision
       SECTIONS.forEach((id) => {
         const el = document.getElementById(id);
-        if (el && el.offsetTop <= pos) setActive(id);
+        if (el && el.offsetTop <= pos && el.offsetTop + el.offsetHeight > pos) {
+          setActive(id);
+        }
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -28,11 +28,11 @@ export default function Navbar() {
     <nav className="fixed top-4 inset-x-4 z-50">
       <div
         className="
-          mx-auto w-fit px-8 py-3
+          mx-auto w-fit px-4 md:px-8 py-2
           bg-gray-100/20 dark:bg-gray-800/20
           backdrop-blur-lg
           rounded-full
-          flex items-center gap-x-8
+          flex items-center gap-x-4 md:gap-x-8 text-sm md:text-base
         "
       >
         {/* Section links */}
@@ -52,30 +52,6 @@ export default function Navbar() {
             {sec}
           </Link>
         ))}
-
-        {/* Social icons (desktop only) */}
-        {/* <div className="hidden md:flex gap-4 text-gray-700 dark:text-gray-300">
-          <Link
-            href="https://github.com/afsalkalladi"
-            target="_blank"
-            className="hover:text-accent-500"
-          >
-            <FiGithub size={20} />
-          </Link>
-          <Link
-            href="https://linkedin.com/in/afsalkalladi"
-            target="_blank"
-            className="hover:text-accent-500"
-          >
-            <FiLinkedin size={20} />
-          </Link>
-          <Link
-            href="mailto:afsalkalladi@gmail.com"
-            className="hover:text-accent-500"
-          >
-            <FiMail size={20} />
-          </Link>
-        </div> */}
       </div>
     </nav>
   );
