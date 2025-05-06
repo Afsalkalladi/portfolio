@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Added AnimatePresence
 import { CertificationEntry, certificationsData } from "@/data/certifications";
+import Image from "next/image";
 
 export default function CertificationsSection() {
   const [selectedCert, setSelectedCert] = useState<CertificationEntry | null>(
@@ -29,9 +30,11 @@ export default function CertificationsSection() {
             aria-label={`View details for ${cert.title}`}
           >
             {cert.icon && (
-              <img
+              <Image
                 src={cert.icon}
                 alt={cert.issuer}
+                width={40}
+                height={40}
                 className="h-10 w-10 mb-3 rounded"
               />
             )}
@@ -73,9 +76,11 @@ export default function CertificationsSection() {
                 &times;
               </button>
               {selectedCert.icon && (
-                <img
+                <Image
                   src={selectedCert.icon}
                   alt={selectedCert.issuer}
+                  width={48}
+                  height={48}
                   className="h-12 w-12 mb-3 rounded"
                 />
               )}

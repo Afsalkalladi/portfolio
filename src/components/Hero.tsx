@@ -1,6 +1,7 @@
 // src/components/Hero.tsx
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -35,7 +36,7 @@ export default function Hero() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="/afsalkalladi_CV.pdf"
+              href="/afsalkalladi.pdf"
               download
               className="px-4 py-2 sm:px-6 sm:py-3 rounded-xl bg-accent-500 text-background-500 font-semibold hover:bg-accent-500/80 transition text-sm sm:text-base"
             >
@@ -53,9 +54,11 @@ export default function Hero() {
         {/* Circular headshot */}
         <div className="mt-12 lg:mt-0 lg:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden">
-            <img
+            <Image
               src="/images/profile.png"
               alt="Afsalkalldi"
+              width={500} // or set as per your layout
+              height={500} // or set as per your layout
               className="w-full h-full object-cover"
             />
           </div>
