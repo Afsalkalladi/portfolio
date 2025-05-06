@@ -6,7 +6,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import { projectsData } from "@/data/projects";
+import { projectsData, ProjectEntry } from "@/data/projects";
 
 // Badge color function reused from ProjectsSection
 const getBadgeColor = (type: string) => {
