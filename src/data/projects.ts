@@ -1,3 +1,15 @@
+// Define the ProjectEntry type and export it
+export interface ProjectEntry {
+  id: string;
+  title: string;
+  period: string;
+  details: string;
+  technologies: string[];
+  tags: string[];
+  bulletPoints: string[];
+  image: string;
+}
+
 export const projectsData: ProjectEntry[] = [
   {
     id: "p1",
