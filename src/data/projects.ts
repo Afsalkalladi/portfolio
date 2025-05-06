@@ -8,6 +8,7 @@ export interface ProjectEntry {
   tags: string[];
   bulletPoints: string[];
   image: string;
+  link?: string; // Optional project link
 }
 
 export const projectsData: ProjectEntry[] = [
