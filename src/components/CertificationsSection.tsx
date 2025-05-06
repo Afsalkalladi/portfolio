@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { certificationsData } from "@/data/certifications";
+import { motion, AnimatePresence } from "framer-motion"; // Added AnimatePresence
+import { CertificationEntry, certificationsData } from "@/data/certifications";
 
 export default function CertificationsSection() {
-  const [selectedCert, setSelectedCert] = useState<Cert | null>(null);
+  const [selectedCert, setSelectedCert] = useState<CertificationEntry | null>(
+    null
+  );
 
   return (
     <section id="certifications" className="py-10 px-6 bg-background-500/10">
@@ -50,55 +52,57 @@ export default function CertificationsSection() {
         ))}
       </div>
 
-      {/* Modal */}
-      {selectedCert && (
-        <motion.div
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          aria-labelledby="cert-modal-title"
-          aria-hidden={!selectedCert}
-        >
-          <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl max-w-md w-full relative text-white shadow-xl">
-            <button
-              className="absolute top-3 right-4 text-white/70 text-xl"
-              onClick={() => setSelectedCert(null)}
-              aria-label="Close Modal"
-            >
-              &times;
-            </button>
-            {selectedCert.icon && (
-              <img
-                src={selectedCert.icon}
-                alt={selectedCert.issuer}
-                className="h-12 w-12 mb-3 rounded"
-              />
-            )}
-            <h3 id="cert-modal-title" className="text-2xl font-bold mb-1">
-              {selectedCert.title}
-            </h3>
-            <p className="text-white/80 font-medium mb-2">
-              {selectedCert.issuer}
-            </p>
-            <p className="text-white/60 text-sm mb-4">{selectedCert.date}</p>
-            <p className="text-white/80 text-sm mb-4">
-              {selectedCert.description}
-            </p>
-            {selectedCert.link && (
-              <a
-                href={selectedCert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline text-sm"
+      {/* Modal with AnimatePresence */}
+      <AnimatePresence>
+        {selectedCert && (
+          <motion.div
+            className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            aria-labelledby="cert-modal-title"
+            aria-hidden={!selectedCert}
+          >
+            <div className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl max-w-md w-full relative text-white shadow-xl">
+              <button
+                className="absolute top-3 right-4 text-white/70 text-xl"
+                onClick={() => setSelectedCert(null)}
+                aria-label="Close Modal"
               >
-                View Certificate
-              </a>
-            )}
-          </div>
-        </motion.div>
-      )}
+                &times;
+              </button>
+              {selectedCert.icon && (
+                <img
+                  src={selectedCert.icon}
+                  alt={selectedCert.issuer}
+                  className="h-12 w-12 mb-3 rounded"
+                />
+              )}
+              <h3 id="cert-modal-title" className="text-2xl font-bold mb-1">
+                {selectedCert.title}
+              </h3>
+              <p className="text-white/80 font-medium mb-2">
+                {selectedCert.issuer}
+              </p>
+              <p className="text-white/60 text-sm mb-4">{selectedCert.date}</p>
+              <p className="text-white/80 text-sm mb-4">
+                {selectedCert.description}
+              </p>
+              {selectedCert.link && (
+                <a
+                  href={selectedCert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline text-sm"
+                >
+                  View Certificate
+                </a>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

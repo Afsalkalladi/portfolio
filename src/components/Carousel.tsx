@@ -8,6 +8,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { projectsData } from "@/data/projects";
 
+// Define the ProjectEntry type based on your data structure
+interface ProjectEntry {
+  id: string;
+  title: string;
+  details: string;
+  period?: string;
+  link?: string;
+}
+
 // Badge color function reused from ProjectsSection
 const getBadgeColor = (type: string) => {
   const normalized = type.toLowerCase();
@@ -22,7 +31,11 @@ const getBadgeColor = (type: string) => {
 };
 
 export default function Carousel() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  // Fix the state type to accept ProjectEntry or null
+  const [selectedProject, setSelectedProject] = useState<ProjectEntry | null>(
+    null
+  );
+
   return (
     <section id="carousel" className="py-20 bg-background-500/5">
       <div className="max-w-6xl mx-auto px-6">

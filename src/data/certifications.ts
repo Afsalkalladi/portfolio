@@ -8,6 +8,7 @@ export interface CertificationEntry {
   description?: string;
   icon: string;
   type: string;
+  link?: string; // Added optional link property
 }
 
 export const certificationsData: CertificationEntry[] = [
@@ -18,8 +19,9 @@ export const certificationsData: CertificationEntry[] = [
     date: "March 2024",
     description:
       "Comprehensive course covering Python basics, data structures, web access, databases, and visualization.",
-    icon: "/icons/django.svg",
+    icon: "/icons/python.svg", // Updated to use a Python icon instead of Django
     type: "Online",
+    link: "https://www.coursera.org/account/accomplishments/verify/example1", // Added example link
   },
   {
     id: "c2",
@@ -30,5 +32,6 @@ export const certificationsData: CertificationEntry[] = [
       "Taught by Andrew Ng, covered supervised/unsupervised learning, best practices, and real-world applications.",
     icon: "/icons/stanford.png",
     type: "Specialization",
+    link: "https://www.coursera.org/account/accomplishments/verify/example2", // Added example link
   },
 ];

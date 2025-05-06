@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { projectsData } from "@/data/projects";
+// Import the type from the project data file
+import { projectsData, ProjectEntry } from "@/data/projects";
 
 // Function to return badge color classes based on project type
 const getBadgeColor = (type: string) => {
@@ -18,7 +19,9 @@ const getBadgeColor = (type: string) => {
 };
 
 export default function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectEntry | null>(
+    null
+  );
 
   return (
     <section id="projects" className="py-10 px-6 bg-background-500/10">
