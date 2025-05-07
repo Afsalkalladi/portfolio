@@ -20,6 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${raleway.variable} font-sans`}>
+      <meta
+        name="google-site-verification"
+        content="ND-gFnMUkFIH0EA2uu0kLBot6oFFUMYexkJfYOiL2n0"
+      />
       <body className="bg-background-500 text-white transition-colors duration-300">
         <Navbar />
         {children}
