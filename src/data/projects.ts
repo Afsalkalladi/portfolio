@@ -42,64 +42,94 @@ export const projectsData: ProjectEntry[] = [
     ],
     image: "/images/projects/pneumonia-detection.png"
   },
+  // {
+  //   id: "p3",
+  //   title: "Single-Cycle MIPS Processor Subset",
+  //   period: "VLSI/FPGA Project",
+  //   details:
+  //     "Architected and simulated a single-cycle MIPS processor in Verilog HDL, supporting a subset of instructions for arithmetic, memory access, and control flow. Modeled the complete fetch-decode-execute-memory-writeback pipeline. Synthesized the design using Vivado for FPGA deployment and resource utilization analysis.",
+  //   technologies: ["Verilog", "Vivado", "MIPS", "FPGA", "Digital Logic"],
+  //   tags: ["VLSI", "Computer Architecture"],
+  //   bulletPoints: [
+  //     "Designed complete single-cycle MIPS pipeline supporting core instruction set",
+  //     "Verified processor behavior using functional simulation and test programs",
+  //     "Synthesized and analyzed hardware resource usage on FPGA using Vivado"
+  //   ],
+  //   image: "/images/projects/mips-processor.png"
+  // },
+  // {
+  //   id: "p4",
+  //   title: "UART Communication Module",
+  //   period: "VLSI/FPGA Project",
+  //   details:
+  //     "Created UART transmitter and receiver modules in Verilog using finite state machines, enabling serial communication at 9600 baud. Developed logic for start/stop bit handling, data framing, and basic error detection. Validated functionality through comprehensive waveform simulation using testbenches.",
+  //   technologies: ["Verilog", "UART", "FSM", "Waveform Simulation"],
+  //   tags: ["VLSI", "Communication Protocols"],
+  //   bulletPoints: [
+  //     "Built UART TX/RX modules with precise state-based control flow",
+  //     "Included error detection and data framing logic for robustness",
+  //     "Verified all scenarios via waveform simulations and testbench validation"
+  //   ],
+  //   image: "/images/projects/uart-module.png"
+  // },
+  // {
+  //   id: "p5",
+  //   title: "Digital System Components",
+  //   period: "VLSI/FPGA Project",
+  //   details:
+  //     "Engineered a suite of essential digital logic components in Verilog including a universal shift register, register file, ALU, and priority encoder. Each module was rigorously tested using modular testbenches, ensuring correct logical behavior and timing performance across all operational modes.",
+  //   technologies: ["Verilog", "Digital Logic", "Testbenching", "Timing Analysis"],
+  //   tags: ["VLSI", "Digital Circuits"],
+  //   bulletPoints: [
+  //     "Designed and simulated reusable digital modules with modular architecture",
+  //     "Implemented testbenches for functionality and corner-case validation",
+  //     "Analyzed timing and logical correctness for integration in larger systems"
+  //   ],
+  //   image: "/images/projects/digital-components.png"
+  // },
+  // {
+  //   id: "p6",
+  //   title: "State Machine Implementations",
+  //   period: "VLSI/FPGA Project",
+  //   details:
+  //     "Implemented multiple Moore state machines in Verilog for real-world applications including a vending machine controller, traffic light system, and programmable clock divider. Ensured full-state test coverage with thorough simulation and verification strategies using waveform analysis.",
+  //   technologies: ["Verilog", "FSM", "Digital Design", "Simulation"],
+  //   tags: ["VLSI", "Finite State Machines"],
+  //   bulletPoints: [
+  //     "Developed Moore FSMs for control logic scenarios in embedded applications",
+  //     "Created modular, testable Verilog code with clearly defined state transitions",
+  //     "Validated timing and logic flow using waveform simulation tools"
+  //   ],
+  //   image: "/images/projects/state-machines.png"
+  // }
   {
-    id: "p3",
-    title: "Single-Cycle MIPS Processor Subset",
-    period: "VLSI/FPGA Project",
-    details:
-      "Architected and simulated a single-cycle MIPS processor in Verilog HDL, supporting a subset of instructions for arithmetic, memory access, and control flow. Modeled the complete fetch-decode-execute-memory-writeback pipeline. Synthesized the design using Vivado for FPGA deployment and resource utilization analysis.",
-    technologies: ["Verilog", "Vivado", "MIPS", "FPGA", "Digital Logic"],
-    tags: ["VLSI", "Computer Architecture"],
-    bulletPoints: [
-      "Designed complete single-cycle MIPS pipeline supporting core instruction set",
-      "Verified processor behavior using functional simulation and test programs",
-      "Synthesized and analyzed hardware resource usage on FPGA using Vivado"
-    ],
-    image: "/images/projects/mips-processor.png"
-  },
-  {
-    id: "p4",
-    title: "UART Communication Module",
-    period: "VLSI/FPGA Project",
-    details:
-      "Created UART transmitter and receiver modules in Verilog using finite state machines, enabling serial communication at 9600 baud. Developed logic for start/stop bit handling, data framing, and basic error detection. Validated functionality through comprehensive waveform simulation using testbenches.",
-    technologies: ["Verilog", "UART", "FSM", "Waveform Simulation"],
-    tags: ["VLSI", "Communication Protocols"],
-    bulletPoints: [
-      "Built UART TX/RX modules with precise state-based control flow",
-      "Included error detection and data framing logic for robustness",
-      "Verified all scenarios via waveform simulations and testbench validation"
-    ],
-    image: "/images/projects/uart-module.png"
-  },
-  {
-    id: "p5",
-    title: "Digital System Components",
-    period: "VLSI/FPGA Project",
-    details:
-      "Engineered a suite of essential digital logic components in Verilog including a universal shift register, register file, ALU, and priority encoder. Each module was rigorously tested using modular testbenches, ensuring correct logical behavior and timing performance across all operational modes.",
-    technologies: ["Verilog", "Digital Logic", "Testbenching", "Timing Analysis"],
-    tags: ["VLSI", "Digital Circuits"],
-    bulletPoints: [
-      "Designed and simulated reusable digital modules with modular architecture",
-      "Implemented testbenches for functionality and corner-case validation",
-      "Analyzed timing and logical correctness for integration in larger systems"
-    ],
-    image: "/images/projects/digital-components.png"
-  },
-  {
-    id: "p6",
-    title: "State Machine Implementations",
-    period: "VLSI/FPGA Project",
-    details:
-      "Implemented multiple Moore state machines in Verilog for real-world applications including a vending machine controller, traffic light system, and programmable clock divider. Ensured full-state test coverage with thorough simulation and verification strategies using waveform analysis.",
-    technologies: ["Verilog", "FSM", "Digital Design", "Simulation"],
-    tags: ["VLSI", "Finite State Machines"],
-    bulletPoints: [
-      "Developed Moore FSMs for control logic scenarios in embedded applications",
-      "Created modular, testable Verilog code with clearly defined state transitions",
-      "Validated timing and logic flow using waveform simulation tools"
-    ],
-    image: "/images/projects/state-machines.png"
-  }
+  id: "p7",
+  title: "Pipelined Multiplier with Timing Analysis",
+  period: "FPGA Toolchain and Optimization Project",
+  details:
+    "Implemented a pipelined 8-bit multiplier using Verilog and Quartus Prime. Verified design via RTL Viewer and ModelSim simulation, then analyzed setup and hold timing using TimeQuest Analyzer to achieve timing closure.",
+  technologies: ["Verilog", "Quartus Prime", "ModelSim", "TimeQuest"],
+  tags: ["FPGA", "Timing Analysis"],
+  bulletPoints: [
+    "Designed 8-bit pipelined multiplier with 4 pipeline stages to improve performance",
+    "Validated design using ModelSim simulation and RTL schematic in Quartus",
+    "Performed critical path timing analysis using TimeQuest to meet clock constraints"
+  ],
+  image: "/images/projects/fpga-multiplier.png"
+},
+{
+  id: "p8",
+  title: "FPGA Architecture Explorer",
+  period: "FPGA Architecture and Research Project",
+  details:
+    "Created a comparative analysis of FPGA architecture types including SRAM, FLASH, and Anti-Fuse. Explored real-world FPGA families and analyzed the usage of hard and soft IP blocks for embedded applications.",
+  technologies: ["Markdown", "FPGA Architecture", "Intel", "Xilinx", "Lattice"],
+  tags: ["FPGA", "Embedded Systems"],
+  bulletPoints: [
+    "Compared FLASH, SRAM, and Anti-Fuse based FPGAs in terms of speed, cost, and reconfigurability",
+    "Surveyed Intel MAX 10, Xilinx Spartan-6, and Lattice iCE40 families for architecture insight",
+    "Explored the role of IP blocks such as memory controllers and DSP cores in modern FPGAs"
+  ],
+  image: "/images/projects/fpga-architecture.png"
+},
 ];

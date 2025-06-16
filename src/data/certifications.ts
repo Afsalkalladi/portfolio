@@ -10,16 +10,16 @@ export interface CertificationEntry {
 }
 
 export const certificationsData: CertificationEntry[] = [
-  {
-    id: "c1",
-    title: "VLSI CAD: Logic to Layout",
-    issuer: "University of Illinois at Urbana-Champaign (Coursera)",
-    date: "2024",
-    description:
-      "A deep dive into the world of Very Large Scale Integration (VLSI) Computer-Aided Design (CAD) tools. Covered the complete digital IC design flow, including logic synthesis, placement, routing, and timing analysis. Explored modern algorithms for optimizing design performance and power efficiency, with hands-on design exercises using academic tools.",
-    icon: "/icons/vlsi.ico",
-    type: "Online",
-  },
+  // {
+  //   id: "c1",
+  //   title: "VLSI CAD: Logic to Layout",
+  //   issuer: "University of Illinois at Urbana-Champaign (Coursera)",
+  //   date: "2024",
+  //   description:
+  //     "A deep dive into the world of Very Large Scale Integration (VLSI) Computer-Aided Design (CAD) tools. Covered the complete digital IC design flow, including logic synthesis, placement, routing, and timing analysis. Explored modern algorithms for optimizing design performance and power efficiency, with hands-on design exercises using academic tools.",
+  //   icon: "/icons/vlsi.ico",
+  //   type: "Online",
+  // },
   {
     id: "c2",
     title: "Introduction to FPGA Design for Embedded Systems",
@@ -30,16 +30,16 @@ export const certificationsData: CertificationEntry[] = [
     icon: "/icons/fpga.ico",
     type: "Online",
   },
-  {
-    id: "c3",
-    title: "Hardware Description Languages for FPGA Design",
-    issuer: "University of Colorado Boulder (Coursera)",
-    date: "2024",
-    description:
-      "Comprehensive study of Verilog and VHDL for modeling and simulating digital circuits. Focused on writing synthesizable code for sequential and combinational circuits, creating testbenches, debugging simulation waveforms, and applying FSM-based design techniques. Final projects included building reusable, parameterized components for FPGA-based applications.",
-    icon: "/icons/hdl.ico",
-    type: "Online",
-  },
+  // {
+  //   id: "c3",
+  //   title: "Hardware Description Languages for FPGA Design",
+  //   issuer: "University of Colorado Boulder (Coursera)",
+  //   date: "2024",
+  //   description:
+  //     "Comprehensive study of Verilog and VHDL for modeling and simulating digital circuits. Focused on writing synthesizable code for sequential and combinational circuits, creating testbenches, debugging simulation waveforms, and applying FSM-based design techniques. Final projects included building reusable, parameterized components for FPGA-based applications.",
+  //   icon: "/icons/hdl.ico",
+  //   type: "Online",
+  // },
   {
     id: "c4",
     title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
