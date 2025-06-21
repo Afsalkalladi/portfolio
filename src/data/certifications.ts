@@ -24,11 +24,12 @@ export const certificationsData: CertificationEntry[] = [
     id: "c2",
     title: "Introduction to FPGA Design for Embedded Systems",
     issuer: "University of Colorado Boulder (Coursera)",
-    date: "2024",
+    date: "2025",
     description:
       "Explored the architecture and inner workings of Field Programmable Gate Arrays (FPGAs) with a strong focus on embedded system applications. Gained practical experience in HDL coding, simulation, and synthesis using tools like Xilinx Vivado. Designed basic digital components and integrated them into larger systems using modular and hierarchical design principles.",
     icon: "/icons/fpga.ico",
     type: "Online",
+    link: "https://www.coursera.org/account/accomplishments/verify/S4790QGF1EAM"
   },
   // {
   //   id: "c3",
