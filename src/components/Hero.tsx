@@ -24,9 +24,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg text-gray-300 max-w-md"
           >
-            Crafting crisp digital circuits & FPGA systems with Verilog HDL,
-            embedded C, and hands-on hardware design. Dive into my projects
-            below!
+            Engineering smart data pipelines & clean code solutions with Python,
+            SQL, and system-level logic. Dive into my projects below!
           </motion.p>
 
           <motion.div
